@@ -94,16 +94,16 @@ function RegisterForm() {
 
     try {
       await register({
+        identifier: phone,
         phone_number: phone,
         full_name: fullName,
         email: email.trim() || undefined,
         password: password,
         state: stateName,
         district: district,
-        village_taluka: village,
+        village: village,
         pincode: pincode,
-        primary_crops: ['Onion', 'Tomato', 'Soybean'],
-        farm_size_acres: parseFloat(acreage) || 4.5,
+        total_acreage: parseFloat(acreage) || 4.5,
         preferred_language: preferredLang,
       });
 
